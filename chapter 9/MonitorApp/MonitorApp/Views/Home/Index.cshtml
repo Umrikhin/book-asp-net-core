@@ -1,0 +1,42 @@
+﻿@using MonitorApp.Models;
+@model List<Indication>;
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Монитор</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="row">
+            <h2>Производительность</h2>
+            <div>
+                <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Время</th>
+                        <th>Память, МБ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var row in Model)
+                    {
+                        <tr>
+                            <td>@row.Id</td>
+                            <td>@row.TimePoint.ToString("dd.MM.yyyy HH:mm:ss")</td>
+                            <td>@string.Format("{0:#0.00}", row.Memory/1024/1024)</td>
+                        </tr>
+                    }
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+<script type="text/javascript">
+  setTimeout(function(){
+    location = ''
+  },20000)
+</script>

@@ -1,0 +1,13 @@
+﻿@model ProductViewModel
+<section class="card">
+    <div class="card-header">@Model?.Name</div>
+    <div class="card-body">
+        <div>@Model?.Price.ToString("C")</div>
+        <div>@Model?.ProductionDate.ToString("dd.MM.yyyy")</div>
+        <div>@Model?.Category</div>
+        <div>
+           <a class="btn btn-info" asp-action="Details" asp-route-id="@Model?.Id">Подробности</a>
+           <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Изменить</a>
+        </div>
+    </div>
+</section>

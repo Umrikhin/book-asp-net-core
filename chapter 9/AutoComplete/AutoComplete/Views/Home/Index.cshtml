@@ -1,0 +1,43 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Поиск</h1>
+            <form asp-action="Search" method="post">
+                <div class="form-group d-flex">
+                    <input type="text" class="form-control me-2" name="search" id="tags" placeholder="Внесите Ф.И.О." />
+                    <input type="submit" value="Найти" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#tags").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: '/Home/Find',
+                        data: { "frarment": $("#tags").val() },
+                        dataType: "json",
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return item.fio;
+                            }))
+                        }
+                    });
+                },
+                minLength: 2
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@using SiteProduct.ViewModels
+@model IEnumerable<ProductViewModel>
+<html>
+<head>
+    <title>Товары</title>
+</head>
+<body>
+    <table>
+        <tr><td>Id</td><td>Наименование</td><td>Цена</td><td>Дата изготовления</td><td>Категория</td></tr>
+    @foreach (var product in Model ?? new List<ProductViewModel>())
+    {
+        <tr>
+            <td>@Html.ActionLink(product.Id.ToString(), "Details", new { id = product.Id })</td>
+            <td>@product.Name</td>
+            <td>@product.Price.ToString("C")</td>
+            <td>@product.ProductionDate.ToString("dd.MM.yyyy")</td>
+            <td>@product.Category</td>
+        </tr>
+    }
+</table>
+</body>
+</html>

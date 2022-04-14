@@ -1,0 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using SiteProduct.Db;
+using SiteProduct.Services;
+var builder = WebApplication.CreateBuilder(args);
+//var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+//builder.Services.AddDbContext<Repository>(options => options.UseSqlServer(conn));
+builder.Services.AddScoped<ITypeProductData, DapperTypeProductData>();
+builder.Services.AddScoped<IProductData, DapperProductData>();
+builder.Services.AddMvc();
+var app = builder.Build();
+app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+app.Run();

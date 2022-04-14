@@ -1,0 +1,12 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cookie</title>
+    </head>
+    <body>
+       <h1>@ViewBag?.CookieValue</h1>
+       <a asp-controller="Home" asp-action="Create">Добавить Cookie</a>
+       <a asp-controller="Home" asp-action="Delete">Удалить Cookie</a>
+    </body>
+</html>

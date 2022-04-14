@@ -1,0 +1,52 @@
+﻿@model Authorization.Models.LoginUser
+@{
+    ViewData["Title"] = "Вход";
+}
+<style type="text/css">
+    /*Стили для хелпера валидации*/
+    .field-validation-error {
+        color: #ff0000;
+    }
+    .field-validation-valid {
+        display: none;
+    }
+    .input-validation-error {
+        border: 1px solid #ff0000 !important;
+        background-color: #ffeeee !important;
+    }
+    .validation-summary-errors {
+        font-weight: bold !important;
+        color: #ff0000 !important;
+    }
+    .validation-summary-valid {
+        display: none;
+    }
+</style>
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-md-8">
+        <section>
+            <form id="account" method="post" asp-action="Login">
+                <h4>Используйте учетную запись системного администратора</h4>
+                <hr />
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group">
+                    <label asp-for="User">Пользователь портала*:</label>
+                    <div><span asp-validation-for="User" class="text-danger"></span></div>
+                    <input class="form-control" asp-for="User" placeholder="Ваше Имя" maxlength="20" />
+                </div><br />
+                <div class="form-group">
+                    <label asp-for="Password">Пароль*:</label>
+                    <div><span asp-validation-for="Password" class="text-danger"></span></div>
+                    <input class="form-control" type="password" placeholder="Ваш пароль" asp-for="Password" maxlength="20" />
+                </div>
+                <div>
+                    <em>Поля помеченные * обязательны.</em><br />
+                </div>
+                <div class="form-group">
+                    <button id="login-submit" type="submit" class="btn btn-primary">Вход</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+﻿@model Product
+@{
+    ViewBag.Title =  $"Изменить {Model?.Name}";
+}
+<h2>@ViewBag.Title</h2>
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="All"></div>
+    <table>
+        <tr>
+            <td><label asp-for="Name"></label></td>
+            <td><input asp-for="Name"/></td>
+            <td><span asp-validation-for="Name"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Price"></label></td>
+            <td><input asp-for="Price"/></td>
+            <td><span asp-validation-for="Price"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="ProductionDate"></label></td>
+            <td><input type="date" asp-for="ProductionDate"/></td>
+            <td><span asp-validation-for="ProductionDate"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="CategoryId"></label></td>
+            <td><select asp-for="CategoryId" 
+                asp-items="@(new SelectList(category.GetCategory(), nameof(TypeProduct.Id), nameof(TypeProduct.TypeName)))"></select>
+            </td>
+            <td><span asp-validation-for="CategoryId"></span></td>
+        </tr>
+    </table>
+    <input type="submit" value="Сохранить" />
+</form>
+<div>
+    <a asp-action="Index">Назад к списку</a>
+</div>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteDocs", "SiteDocs\SiteDocs.csproj", "{AE937FCE-38C6-4036-B4E7-0638617BCEFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE937FCE-38C6-4036-B4E7-0638617BCEFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE937FCE-38C6-4036-B4E7-0638617BCEFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE937FCE-38C6-4036-B4E7-0638617BCEFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE937FCE-38C6-4036-B4E7-0638617BCEFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C8D2347-7E35-46CA-AA93-4C2A15C7668A}
+	EndGlobalSection
+EndGlobal

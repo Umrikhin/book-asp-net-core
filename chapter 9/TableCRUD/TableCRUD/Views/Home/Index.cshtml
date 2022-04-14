@@ -1,0 +1,105 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using TableCRUD.Models;
+@model List<Country>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <title>Страны</title>
+    <style type="text/css">
+        /* Стили для хелпера валидации */
+        .field-validation-error {
+            color: #ff0000;
+        }
+        .field-validation-valid {
+            display: none;
+        }
+        .input-validation-error {
+            border: 1px solid #ff0000 !important;
+            background-color: #ffeeee !important;
+        }
+        .validation-summary-errors {
+            font-weight: bold !important;
+            color: #ff0000 !important;
+        }
+        .validation-summary-valid {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="m-1 p-1">
+        <h2>Список стран</h2>
+        <div asp-validation-summary="All" form="FormForEdit"></div>
+        <form asp-action="AddLand" asp-controller="Home" method="post">
+            <div class="input-group mb-2">
+                <input required name="NameLand" class="form-control" placeholder="Страна" maxlength="20" />
+                <button type="submit" class="btn btn-primary">Добавить</button>
+            </div>
+        </form>
+        @if (TempData["messageDelInfo"] != null)
+        {
+            <div class="alert alert-info mt-1">@TempData["messageDelInfo"]</div>
+        }
+        @if (TempData["messageDelErr"] != null)
+        {
+            <div class="alert alert-warning mt-1">@TempData["messageDelErr"]</div>
+        }
+        <table class="table table-striped table-bordered">
+            <thead class="table-primary">
+                <tr><th>Код</th><th>Страна</th><th class="text-center">Действие</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var row in Model)
+                {
+                    if (row.Id == ViewBag.RowUpdate)
+                    {
+                        <tr>
+                            <td>@row.Id</td>
+                            <td><input required name="NameLandForRow" class="form-control form-control-sm" placeholder="Страна" value="@row.CountryName" maxlength="20" form="FormForEdit" /></td>  
+                            <td align="center">
+                                <form id="FormForEdit" method="post">
+                                    <input type="hidden" name="deleteId" value="@row.Id" />
+                                    <input type="hidden" name="saveId" value="@row.Id" />
+                                    <div class="btn-group" role="group">
+                                        <button class="btn btn-sm btn-warning" formaction="/Home/EditLand">Сохранить</button>
+                                        <button class="btn btn-sm btn-info" formaction="/Home/CancelUpdateLand">Отмена</button>
+                                        <button class="btn btn-sm btn-danger" onclick="return confirm('Вы уверены, что хотите удалить этот элемент?');" formaction="/Home/DeleteLand">Удалить</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr> 
+                    }
+                    else
+                    {
+                        <tr>
+                            <td>@row.Id</td>
+                            <td>@row.CountryName</td>
+                            <td align="center">
+                                <form method="post">
+                                    <input type="hidden" name="updateId" value="@row.Id" />
+                                    <input type="hidden" name="deleteId" value="@row.Id" />
+                                    <input type="hidden" name="saveId" value="@ViewBag.RowUpdate" />
+                                    <div class="btn-group" role="group">
+                                        <button class="btn btn-sm btn-info" formaction="/Home/UpdateLand">Изменить</button>
+                                        <button class="btn btn-sm btn-danger" onclick="return confirm('Вы уверены, что хотите удалить этот элемент?');" formaction="/Home/DeleteLand">Удалить</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" class="text-right">Всего:</td>
+                    <td class="text-center">
+                        <b>@Model.Count().ToString()</b>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿@model IEnumerable<ProductViewModel>
+@{
+    ViewBag.Title = "Домашняя страница";
+}
+@foreach (var product in Model ?? new List<ProductViewModel>())
+{
+    <div class="p-1"><partial name="_Product", model="@product" /></div>
+}
+<div class="p-1"><a class="btn btn-success" asp-action="Create">Добавить</a></div>
+@section footer{ <div>Это нижний колонтитул домашней страницы</div> }

@@ -1,0 +1,10 @@
+﻿@inject HelloRazor.Services.IHello MsgService
+<html>
+<head>
+    <title>Пример внедрения зависимостей</title>
+</head>
+<body>
+     <p>@MsgService.GetMsg()</p>
+     <p>@(TempData["DataContent"] ?? "Ничего не передано")</p>
+</body>
+</html>

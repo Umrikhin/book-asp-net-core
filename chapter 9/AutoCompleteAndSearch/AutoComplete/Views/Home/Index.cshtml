@@ -1,0 +1,79 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<AutoComplete.Models.Person>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Поиск</h1>
+            <form asp-action="Search" method="post">
+                <div class="form-group d-flex">
+                    <input type="text" class="form-control me-2" name="search" id="tags" placeholder="Внесите Ф.И.О." />
+                    <input type="submit" value="Найти" class="btn btn-primary" />
+                </div>
+            </form>
+            @if (Model != null)
+            {
+                <div>
+                    <h4>Результат поиска:</h4>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Код</th>
+                                <th>Ф.И.О.</th>
+                                <th>Рожден</th>
+                                <th>Гражданство</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var row in Model)
+                            {
+                                <tr>
+                                    <td>@row.Id</td>
+                                    <td>@row.FIO</td>
+                                    <td>@row.DR.ToString("dd.MM.yyyy")</td>
+                                    <td>@row.Country</td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">Записей на странице:</td>
+                                <td>
+                                    @Model.Count().ToString()
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#tags").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: '/Home/Find',
+                        data: { "frarment": $("#tags").val() },
+                        dataType: "json",
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return item.fio;
+                            }))
+                        }
+                    });
+                },
+                minLength: 2
+            });
+        });
+    </script>
+</body>
+</html>

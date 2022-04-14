@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+    <title>Новые документы</title>
+</head>
+<body>
+    <form method="post" action="~/Home/AcceptResultMoreClass">
+        @for (int i = 0; i < 3; i++)
+        {
+            <div>
+                <h3>Документ @(i + 1)</h3>
+                <p>
+                    <label>Код документа</label><br />
+                    <input type="number" name="docs[@i].Code" />
+                </p>
+                <p>
+                    <label>Наименование</label><br />
+                    <input type="text" name="docs[@i].Title" />
+                </p>
+                <p>
+                    <label>Кем выдан</label><br />
+                    <input type="text" name="docs[@i].IssuedBy" />
+                </p>
+            </div>
+        }
+        <p>
+            <input type="submit" value="Добавить всех" />
+        </p>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,107 @@
+﻿<html>
+<head>
+    <title>Примеры код-вставок для Razor</title>
+</head>
+<body>
+    @*Простые выражения*@
+    @*<p>Дата: @DateTime.Now.ToLongDateString()</p>
+    <p>@(3 + 1)</p>
+    <p>@@DateTime.Now = @DateTime.Now.ToLongDateString()</p>*@
+
+    @*Более сложные C#-конструкции*@
+   @* @{
+        string text = "Добрый день, уважаемый пользователь!";
+        text = text + " Добро пожаловать на наш сайт!";
+    }
+    <h2>@text</h2>*@
+
+    @*Условные конструкции*@
+    @*@{
+        string content = "Добрый день, уважаемый пользователь!";
+        content += " Добро пожаловать на наш сайт!";
+        bool isEnabled = false;
+    }
+    @if (isEnabled)
+    {
+        <p>@content</p>
+    }
+    else
+    {
+        <p>Доступ запрещен. Мы сожалеем об этом.</p>
+    }
+    @{
+        int val = 1;
+    }
+    @switch (val)
+    {
+        case 0:
+            <p>@val</p>
+            break;
+        case 1:
+            <p>@(val + val)</p>
+            break;
+        default:
+            <p>@(val * val)</p>
+            break;
+    }*@
+
+    @*Циклы*@
+    @*@for (var i = 1; i < 5; i++)
+    {
+        <span>@i; </span>
+    }<br />
+    @{
+        int val2 = 0;
+    }
+    @while (val2 <= 10)
+    {
+        <span>@val2; </span>
+        val2++;
+    }<br />
+    @{
+        int val3 = 0;
+    }
+    @do
+    {
+        <span>@val3; </span>
+        val3++;
+    }
+    while (val3 < 10);<br />
+    <p>Завершение!</p>
+    @{
+        string[] fams = { "Иванов", "Петров", "Кузнецов" };
+    }
+    <ul>
+        @foreach (var fam in fams)
+        {
+            <li>@fam</li>
+        }
+    </ul>*@
+
+    @*Try-Catch-Finally*@
+   @* @try
+    {
+        throw new Exception("Что-то пошло не так...");
+    }
+    catch (Exception err)
+    {
+        <p>Сообщение об ошибке: @err.Message</p>
+    }
+    finally
+    {
+        <p>Завершение операции</p>
+    }*@
+
+    @*Функции*@
+    @functions
+    {
+        public double GetArea(double R)
+        {
+            double result = 0;
+            result = Math.PI * R * R;
+            return result;
+        }
+    }
+    <div>Площадь круга радиусом 10 м: @GetArea(10).ToString("N4") кв. м</div>
+</body>
+</html>

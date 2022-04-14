@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloTagHelper", "HelloTagHelper\HelloTagHelper.csproj", "{F44A7E84-C025-4B67-AAAF-70971B3192E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F44A7E84-C025-4B67-AAAF-70971B3192E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44A7E84-C025-4B67-AAAF-70971B3192E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44A7E84-C025-4B67-AAAF-70971B3192E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44A7E84-C025-4B67-AAAF-70971B3192E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {704BF599-B31C-438F-BF20-6C65AB761B1A}
+	EndGlobalSection
+EndGlobal

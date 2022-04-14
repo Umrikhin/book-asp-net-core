@@ -1,0 +1,14 @@
+﻿@using HelloHtmlHelpers.Utils;
+<html>
+<head>
+    <title>Примеры использования HTML-хелперов</title>
+</head>
+<body>
+    <p>@Html.Raw(ViewBag.Message)</p>
+    <p>@Html.HelloWorldStrong("Привет Мир")</p>
+    <h3>Имена</h3>
+    <p>
+        @Html.HelloWorld(new string[] {"Алексей", "Дмитрий", "Анна"})
+    </p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿@using SiteMovies.Models
+@using SiteMovies.ViewModels
+@model MoviesViewModel
+<html>
+<head>
+    <title>Фильмы</title>
+</head>
+<body>
+    <h1>Комедии</h1>
+    @foreach (Comedy comedy in Model?.ListComedy ?? new List<Comedy>())
+    {
+        <h2>@comedy.Title</h2>
+        <p>Формат видео: @comedy.VideoFormat</p>
+    }
+    <hr />
+    <h1>Драмы</h1>
+    @foreach (Drama drama in Model?.ListDrama ?? new List<Drama>())
+    {
+        <h2>@drama.Title</h2>
+         <p>Формат видео: @drama.VideoFormat<br />
+         Формат звука: @drama.SoundFormat</p>
+    }
+</body>
+</html>

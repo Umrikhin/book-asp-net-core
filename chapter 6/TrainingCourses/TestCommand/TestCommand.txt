@@ -1,0 +1,9 @@
+Invoke-RestMethod https://localhost:7276/api/courses -Method GET
+
+Invoke-RestMethod https://localhost:7276/api/courses/1 -Method GET
+
+Invoke-RestMethod https://localhost:7276/api/courses -Method POST -Body (@{title = "Химия"; hours = 80} | ConvertTo-Json) -ContentType "application/json; charset=utf-8"
+
+Invoke-RestMethod https://localhost:7276/api/courses/4 -Method PUT -Body (@{title = "Физика"; hours = 80} | ConvertTo-Json) -ContentType "application/json; charset=utf-8"
+
+Invoke-RestMethod https://localhost:7276/api/courses/4 -Method DELETE

@@ -1,0 +1,10 @@
+﻿@model ProductViewModel
+@{
+    ViewBag.Title = "Подробности";
+}
+<div>Идентификатор: @Model?.Id</div>
+<div>Наименование: @Model?.Name</div>
+<div>Цена: @Model?.Price.ToString("C")</div>
+<div>Дата изготовления: @Model?.ProductionDate.ToString("dd.MM.yyyy")</div>
+<div>Категория: @Model?.Category</div>
+@Html.ActionLink("К списку", "Index", "Home")

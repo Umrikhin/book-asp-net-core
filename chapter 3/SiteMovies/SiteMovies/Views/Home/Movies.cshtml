@@ -1,0 +1,16 @@
+﻿@using SiteMovies.Models
+@model IEnumerable<Movie>
+<html>
+<head>
+    <title>Фильмы</title>
+</head>
+<body>
+    @foreach (var item in Model ?? new List<Movie>())
+    {
+        <h2>Заголовок: @item.Title</h2>
+        <p>Жанр: @item.Genre<br />
+        Длительность эпизода: @item.Duration минут</p>
+        <hr />
+    }
+</body>
+</html>

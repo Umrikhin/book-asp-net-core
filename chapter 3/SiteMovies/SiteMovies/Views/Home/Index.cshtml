@@ -1,0 +1,12 @@
+﻿@using SiteMovies.Models
+@model Movie
+<html>
+<head>
+    <title>@Model?.Title</title>
+</head>
+<body>
+    <h2>@Model?.Title</h2>
+    <p><b>Жанр: @Model?.Genre</b><br />
+    Продолжительность: @Model?.Duration.ToString() минут</p>
+</body>
+</html>

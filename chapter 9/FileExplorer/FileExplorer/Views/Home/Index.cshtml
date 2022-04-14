@@ -1,0 +1,36 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using FileExplorer.Models;
+@model List<FileModel>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Styles/styles.css">
+    <title>Файлы</title>
+</head>
+<body>
+    <div class="m-1 p-1">
+        <form asp-action="AddFile" asp-controller="Home" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="input-group mb-3">
+                <input class="form-control" type="file" name="uploadedFile" accept="image/*" id="choose-file" />
+                <button type="submit" class="btn btn-info">Загрузить</button>
+            </div>
+        </form>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>Имя файла</th>
+                <th></th>
+            </tr>
+            @foreach (FileModel file in Model)
+            {
+                <tr>
+                    <td>@file.FileName</td>
+                    <td><a asp-action="DownloadFile" asp-route-fileName="@file.FileName">Скачать</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

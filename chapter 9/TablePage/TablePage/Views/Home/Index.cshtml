@@ -1,0 +1,76 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using TablePage.Models;
+@model List<Person>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <title>Клиенты</title>
+    <style>
+        caption {
+            caption-side: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="m-1 p-1">
+        <h2>Список</h2>
+        <table class="table table-bordered">
+            @if (ViewBag.PageInfo != null)
+            {
+                var items = (ViewBag.PageInfo as PagingInfo)?.TotalItems.ToString();
+                <caption class="caption">Всего записей: @items</caption>
+            }
+            <thead class="table-primary">
+                <tr><th>N</th><th>Имя</th><th>Фамилия</th><th>Рожден</th><th>Проживает</th></tr>
+            </thead>
+            <tbody>
+                @{
+                    int num_row = 1;
+                    if (ViewBag.PageInfo != null)
+                    {
+                        num_row = ((PagingInfo)ViewBag.PageInfo).ItemsPerPage * (((PagingInfo)ViewBag.PageInfo).CurrentPage - 1) + 1;
+                    }
+                }
+                @foreach (Person row in Model)
+                {
+                    <tr>
+                        <td>@num_row</td>
+                        <td>@row.FirstName</td>
+                        <td>@row.LastName</td>
+                        <td>@row.DateOfBirth.ToString("dd.MM.yyyy")</td>
+                        <td>@row.Country</td>
+                    </tr>
+                    num_row += 1;
+                }
+            </tbody>
+            @if (ViewBag.PageInfo != null)
+            {
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Страница:
+                            <div class="btn-group pull-right m-1">
+                                @{
+                                    PagingInfo p = (PagingInfo)ViewBag.PageInfo;
+                                    for (int e = 1; e <= p.TotalPages; e++)
+                                    {
+                                        if (e == p.CurrentPage)
+                                        {
+                                            <a class="btn-primary btn" asp-action="Index" asp-controller="Home" asp-route-elementPage="@e">@e</a>
+                                        }
+                                        else
+                                        {
+                                            <a class="btn-secondary btn" asp-action="Index" asp-controller="Home" asp-route-elementPage="@e">@e</a>
+                                        }
+                                    }
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            }
+            </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Dropdownlist.Models;
+@model ViewLand;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Города</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Выберите страну из списка</h1>
+            <form asp-action="Select" method="post">
+                <div class="form-group">
+                    <label>Страна:</label>
+                    <select name="Country" asp-items=@ViewBag.Land class="form-select" onchange="this.form.submit();" asp-for="idLand"></select>
+                </div>
+            </form>
+            <h2>Города</h2>
+            <div>
+                <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Город</th>
+                        <th>Популяция</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{int i = 0; }
+                    @foreach (var city in Model.citys)
+                    {
+                        i += 1;
+                        <tr>
+                            <td>@i</td>
+                            <td>@city.nm</td>
+                            <td>@city.PopulationSize.ToString("N0")</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Общая численность:</td>
+                        <td>
+                            @Model.citys.Sum(x => x.PopulationSize).ToString("N0")
+                        </td>
+                    </tr>
+                </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

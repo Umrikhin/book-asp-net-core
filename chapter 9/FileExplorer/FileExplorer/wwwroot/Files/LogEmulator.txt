@@ -1,0 +1,285 @@
+Время	Имя устройства	Тип	PID	Тег	Сообщение
+08-13 08:37:53.689	pie	Error	2251	ctxmgr	[NetworkUtil]No active synchronizable contexts. [CONTEXT service_id=47 ]
+08-13 08:37:53.638	pie	Info	4907	MicroDetectionWorker	onReady
+08-13 08:37:53.634	pie	Info	4907	AudioController	Created new AudioSource
+08-13 08:37:53.634	pie	Info	4907	AudioController	Using mInputStreamFactoryBuilder
+08-13 08:37:53.634	pie	Info	4907	MicroDetectionWorker	#startMicroDetector [speakerMode: 0]
+08-13 08:37:53.603	pie	Info	4907	StreamRenderer	maybeRegisterNowCardsScope(nowcards-5349020700616879217, com.google.android.sidekick.shared.remoteapi.CardRenderingContext@8c06782)
+08-13 08:37:53.603	pie	Info	4907	StreamRenderer	cleanUpRendererScope(nowcards--726814313321738259)
+08-13 08:37:53.597	pie	Info	4907	StreamController	registerScope: nowcards-5349020700616879217
+08-13 08:37:53.597	pie	Info	4907	StreamController	cleanUpControllerScope(nowcards--726814313321738259)
+08-13 08:37:53.570	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:53.564	pie	Info	1966	chatty	uid=10025(com.android.systemui) RenderThread identical 2 lines
+08-13 08:37:53.544	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:53.543	pie	Info	4907	StreamRenderer	maybeRegisterNowCardsScope(nowcards--726814313321738259, com.google.android.sidekick.shared.remoteapi.CardRenderingContext@f4185ed)
+08-13 08:37:53.535	pie	Warning	4907	LocationOracle	No location history returned by ContextManager
+08-13 08:37:53.530	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:53.523	pie	Info	1966	chatty	uid=10025(com.android.systemui) RenderThread identical 3 lines
+08-13 08:37:53.496	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:53.494	pie	Error	4907	NowController	Caused by: com.google.android.apps.gsa.sidekick.main.h.n: Could not complete scheduled request to refresh entries. ClientErrorCode: 3
+	at com.google.android.apps.gsa.staticplugins.nowstream.b.a.ar.az(Unknown Source:4)
+	at com.google.common.util.concurrent.q.ap(SourceFile:7)
+	at com.google.common.util.concurrent.p.run(SourceFile:32)
+	at com.google.common.util.concurrent.bt.execute(SourceFile:3)
+	at com.google.common.util.concurrent.d.b(SourceFile:275)
+	at com.google.common.util.concurrent.d.addListener(SourceFile:135)
+	at com.google.common.util.concurrent.p.b(SourceFile:3)
+	at com.google.android.apps.gsa.shared.util.concurrent.h.a(SourceFile:16)
+	at com.google.android.apps.gsa.shared.util.concurrent.h.a(SourceFile:13)
+	at com.google.android.apps.gsa.staticplugins.nowstream.b.a.be.cbB(SourceFile:47)
+	... 14 more
+08-13 08:37:53.494	pie	Error	4907	NowController	java.util.concurrent.ExecutionException: com.google.android.apps.gsa.sidekick.main.h.n: Could not complete scheduled request to refresh entries. ClientErrorCode: 3
+	at com.google.common.util.concurrent.d.eA(SourceFile:85)
+	at com.google.common.util.concurrent.d.get(SourceFile:23)
+	at com.google.common.util.concurrent.l.get(SourceFile:2)
+	at com.google.android.apps.gsa.staticplugins.nowstream.b.a.be.cbB(SourceFile:49)
+	at com.google.android.apps.gsa.staticplugins.nowstream.b.a.be.cbA(SourceFile:181)
+	at com.google.android.apps.gsa.staticplugins.nowstream.b.a.bh.run(Unknown Source:2)
+	at com.google.android.apps.gsa.shared.util.concurrent.at.run(SourceFile:4)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:458)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:458)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at com.google.android.apps.gsa.shared.util.concurrent.b.g.run(Unknown Source:4)
+	at com.google.android.apps.gsa.shared.util.concurrent.b.aw.run(SourceFile:4)
+	at com.google.android.apps.gsa.shared.util.concurrent.b.aw.run(SourceFile:4)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.lang.Thread.run(Thread.java:764)
+	at com.google.android.apps.gsa.shared.util.concurrent.b.i.run(SourceFile:6)
+08-13 08:37:53.494	pie	Error	4907	NowController	Failed to access data from EntryProvider. ExecutionException.
+08-13 08:37:53.493	pie	Error	4907	EntrySyncManager	Cannot determine account name: drop request
+08-13 08:37:53.491	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:53.475	pie	Info	4907	StreamController	registerScope: nowcards--726814313321738259
+08-13 08:37:53.458	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:53.447	pie	Warning	4907	SessionLifecycleManager	Handover failed. Creating new session controller.
+08-13 08:37:53.443	pie	Warning	1843	ActivityManager	setHasOverlayUi called on unknown pid: 10279
+08-13 08:37:53.436	pie	Warning	1691	SurfaceFlinger	Attempting to destroy on removed layer: Task=25#0
+08-13 08:37:53.436	pie	Warning	1691	SurfaceFlinger	Attempting to destroy on removed layer: AppWindowToken{e447c32 token=Token{7a08c3d ActivityRecord{d9ff994 u0 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity t25}}}#0
+08-13 08:37:53.430	pie	Warning	1691	SurfaceFlinger	Attempting to destroy on removed layer: com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity#0
+08-13 08:37:53.430	pie	Warning	1691	SurfaceFlinger	Attempting to set client state on removed layer: com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity#0
+08-13 08:37:53.424	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:53.399	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:53.385	pie	Debug	4907	EGL_emulation	eglMakeCurrent: 0xdfd85c00: ver 3 0 (tinfo 0xdfd83440)
+08-13 08:37:53.342	pie	Debug	2508	EGL_emulation	eglMakeCurrent: 0xdfd85600: ver 3 0 (tinfo 0xdfd834a0)
+08-13 08:37:53.307	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:53.304	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:53.301	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:53.286	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:53.284	pie	Debug	1691	SurfaceFlinger	duplicate layer name: changing com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity to com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1
+08-13 08:37:53.278	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:53.276	pie	Info	1843	GnssLocationProvider	WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d2ac387)
+08-13 08:37:53.276	pie	Info	1843	GnssLocationProvider	WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@d2ac387)
+08-13 08:37:53.266	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:53.236	pie	Warning	1691	SurfaceFlinger	Attempting to destroy on removed layer: com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity#1
+08-13 08:37:53.236	pie	Warning	1691	SurfaceFlinger	Attempting to set client state on removed layer: com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity#1
+08-13 08:37:53.233	pie	Warning	1843	InputDispatcher	Attempted to unregister already unregistered input channel '5dfd1f4 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity (server)'
+08-13 08:37:53.233	pie	Info	1843	WindowManager	WIN DEATH: Window{5dfd1f4 u0 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity}
+08-13 08:37:53.229	pie	Info	1843	libprocessgroup	Successfully killed process cgroup uid 10086 pid 10279 in 3ms
+08-13 08:37:53.229	pie	Warning	1843	libprocessgroup	kill(-10279, 9) failed: No such process
+08-13 08:37:53.228	pie	Info	1843	ActivityManager	Process com.mcopanacea.getpassport (pid 10279) has died: vis  +99TOP 
+08-13 08:37:53.225	pie	Info	1692	Zygote	Process 10279 exited due to signal (6)
+08-13 08:37:53.222	pie	Warning	1843	InputDispatcher	Attempted to unregister already unregistered input channel 'f0d9506 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity (server)'
+08-13 08:37:53.222	pie	Info	1843	WindowManager	WIN DEATH: Window{f0d9506 u0 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity}
+08-13 08:37:53.220	pie	Error	1843	InputDispatcher	channel 'f0d9506 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+08-13 08:37:53.220	pie	Warning	1843	InputDispatcher	channel 'f0d9506 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+08-13 08:37:53.220	pie	Error	1843	InputDispatcher	channel '5dfd1f4 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+08-13 08:37:53.219	pie	Warning	1843	InputDispatcher	channel '5dfd1f4 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+08-13 08:37:53.148	pie	Warning	1843	BroadcastQueue	Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+08-13 08:37:53.144	pie	Error	1610	lowmemorykiller	Error writing /proc/10279/oom_score_adj; errno=22
+08-13 08:37:53.139	pie	Warning	1843	BroadcastQueue	Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+08-13 08:37:53.117	pie	Error	1713		Tombstone written to: /data/tombstones/tombstone_02
+  Force finishing activity com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity
+08-13 08:37:53.092	pie	Debug	10279	EGL_emulation	eglMakeCurrent: 0xbd10aea0: ver 3 0 (tinfo 0xbd22dfe0)
+08-13 08:37:53.086	pie	Debug	10279	EGL_emulation	eglMakeCurrent: 0xbd10aea0: ver 3 0 (tinfo 0xbd22dfe0)
+08-13 08:37:52.861	pie	Error	10314	DEBUG	backtrace:
+    #00 pc 00000b39  [vdso:ea9f4000] (__kernel_vsyscall+9)
+    #01 pc 00078a4c  /system/lib/libc.so (tgkill+28)
+    #02 pc 00090dfb  /system/lib/libndk_translation.so (ndk_translation::RunHostSpecificSyscallImpl(int, int, int, int, int, int, int)+1547)
+    #03 pc 0008c073  /system/lib/libndk_translation.so (ndk_translation::RunKernelSyscall(int, int, int, int, int, int, int)+243)
+    #04 pc 00088022  /system/lib/libndk_translation.so (ndk_translation::SVC(ndk_translation::ProcessState*, ndk_translation::SVC_Args const&)+50)
+    #05 pc 0009940c  /system/lib/libndk_translation.so (ndk_translation::InsnInterpreter::CallInterp(unsigned int, void const*, void const*)+44)
+    #06 pc 000b3a6c  /system/lib/libndk_translation.so (ndk_translation::SemanticsDecoder::SVC(ndk_translation::SVC_Args const&)+108)
+    #07 pc 000efd1b  /system/lib/libndk_translation.so (ndk_translation::ArmDecoder::TranslateThumbInsn(unsigned short const*)+8891)
+    #08 pc 0009aca0  /system/lib/libndk_translation.so (ndk_translation::(anonymous namespace)::DecodeInsn(unsigned int, ndk_translation::(anonymous namespace)::ArmInterpreter*, ndk_translation::ProcessState*, ndk_translation::ArmDecoder*)+144)
+    #09 pc 0009aec7  /system/lib/libndk_translation.so (ndk_translation::InterpretTrace(ndk_translation::ProcessState*)+327)
+    #10 pc 00089690  /system/lib/libndk_translation.so (ndk_translation_HandleNotTranslated+288)
+    #11 pc 000893f7  /system/lib/libndk_translation.so (ndk_translation::ExecuteGuest(ndk_translation::ProcessState*, unsigned int)+231)
+    #12 pc 00080fb4  /system/lib/libndk_translation.so (ndk_translation::RunGuestCall(unsigned int, int, int, unsigned int*)+372)
+    #13 pc 0006bcc9  /system/lib/libndk_translation.so (ndk_translation::(anonymous namespace)::RunGuestJNIFunction(unsigned int, int, int, unsigned int*)+57)
+    #14 pc 0003e779  <anonymous:b5d54000>
+    #15 pc 00013584  /data/app/com.mcopanacea.getpassport-5Nhu8VFdIwXSBtE_xpccEw==/lib/arm/libmonodroid.so (Java_mono_android_Runtime_propagateUncaughtException)
+    #16 pc 00000002  <unknown>
+08-13 08:37:52.861	pie	Error	10314	DEBUG	
+08-13 08:37:52.848	pie	Error	10314	DEBUG	signal 6 (SIGABRT), code -6 (SI_TKILL), fault addr --------
+    eax 00000000  ebx 00002827  ecx 00002847  edx 00000006
+    edi b5bff9c8  esi 00000000
+    ebp b5bfddf8  esp b5bfdd3c  eip ea9f4b39
+08-13 08:37:52.848	pie	Error	10314	DEBUG	pid: 10279, tid: 10311, name: Thread-4  >>> com.mcopanacea.getpassport <<<
+08-13 08:37:52.848	pie	Error	10314	DEBUG	ABI: 'x86'
+08-13 08:37:52.848	pie	Error	10314	DEBUG	Revision: '0'
+08-13 08:37:52.848	pie	Error	10314	DEBUG	Build fingerprint: 'google/sdk_gphone_x86_arm/generic_x86_arm:9/PSR1.180720.117/5875966:user/release-keys'
+08-13 08:37:52.848	pie	Error	10314	DEBUG	*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+08-13 08:37:52.844	pie	Info	10314	crash_dump32	performing dump of process 10279 (target tid = 10311)
+08-13 08:37:52.844	pie	Info	1713		received crash request for pid 10311
+08-13 08:37:52.843	pie	Info	10314	crash_dump32	obtaining output fd from tombstoned, type: kDebuggerdTombstone
+08-13 08:37:52.761	pie	Error	10279	libc	Fatal signal 6 (SIGABRT), code -6 (SI_TKILL) in tid 10311 (Thread-4), pid 10279 (cea.getpassport)
+08-13 08:37:52.761	pie	Error	10279		* Assertion at /Users/builder/jenkins/workspace/archive-mono/2020-02/android/release/mono/utils/mono-threads.c:650, condition `info' not met, function:mono_thread_info_current, 
+08-13 08:37:52.761	pie	Warning	10279		Thread 0xb5bff970 may have been prematurely finalized
+08-13 08:37:52.760	pie	Error	10279	AndroidRuntime	Caused by: android.system.ErrnoException: android_getaddrinfo failed: EACCES (Permission denied)
+	... 31 more
+08-13 08:37:52.760	pie	Error	10279	AndroidRuntime	Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+	at libcore.io.Linux.android_getaddrinfo(Native Method)
+	at libcore.io.BlockGuardOs.android_getaddrinfo(BlockGuardOs.java:172)
+	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:137)
+	... 28 more
+08-13 08:37:52.760	pie	Error	10279	AndroidRuntime	java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:151)
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:105)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1154)
+	at com.android.okhttp.Dns$1.lookup(Dns.java:39)
+	at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:175)
+	at com.android.okhttp.internal.http.RouteSelector.nextProxy(RouteSelector.java:141)
+	at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:83)
+	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:126)
+	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:95)
+	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:281)
+	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:224)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:461)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:407)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getHeaders(HttpURLConnectionImpl.java:163)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getHeaderField(HttpURLConnectionImpl.java:207)
+	at java.net.URLConnection.getHeaderFieldInt(URLConnection.java:612)
+	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getHeaderFieldInt(DelegatingHttpsURLConnection.java:198)
+	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getHeaderFieldInt(HttpsURLConnectionImpl.java:26)
+	at com.regula.common.http.HttpRequestBuilder.intHeader(HttpRequestBuilder.java:1242)
+	at com.regula.common.http.HttpRequestBuilder.intHeader(HttpRequestBuilder.java:1226)
+	at com.regula.common.http.HttpRequestBuilder.contentLength(HttpRequestBuilder.java:1323)
+	at com.regula.common.http.HttpRequestBuilder.byteStream(HttpRequestBuilder.java:1054)
+	at com.regula.common.http.HttpRequestBuilder.bytes(HttpRequestBuilder.java:1068)
+	at com.regula.common.http.HttpRequestHelper.executeGetHttpRequest(HttpRequestHelper.java:60)
+	at com.regula.documentreader.api.UniversalDataTransceiver.executeHttpRequest(UniversalDataTransceiver.java:269)
+	at com.regula.documentreader.api.UniversalDataTransceiver.access$000(UniversalDataTransceiver.java:37)
+	at com.regula.documentreader.api.UniversalDataTransceiver$1.run(UniversalDataTransceiver.java:71)
+	at java.lang.Thread.run(Thread.java:764)
+08-13 08:37:52.760	pie	Error	10279	AndroidRuntime	Process: com.mcopanacea.getpassport, PID: 10279
+08-13 08:37:52.760	pie	Error	10279	AndroidRuntime	FATAL EXCEPTION: Thread-4
+08-13 08:37:52.748	pie	Debug	10279	NetworkSecurityConfig	No Network Security Config specified, using platform default
+08-13 08:37:52.275	pie	Info	1843	GnssLocationProvider	WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ff4843e)
+08-13 08:37:52.275	pie	Info	1843	GnssLocationProvider	WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ff4843e)
+08-13 08:37:52.121	pie	Info	2251	PlaceInferenceEngine	[anon] Changed inference mode: 1
+08-13 08:37:52.089	pie	Info	2251	PlaceInferenceEngine	[anon] Changed inference mode: 1
+08-13 08:37:52.059	pie	Error	1843	TaskPersister	File error accessing recents directory (directory doesn't exist?).
+08-13 08:37:52.051	pie	Info	2251	Places	?: Couldn't find platform key file.
+08-13 08:37:52.048	pie	Info	2251	Places	?: Couldn't find platform key file.
+08-13 08:37:52.007	pie	Info	4907	WorkController	WorkProxy is not enqueued because WorkController is disposed: WorkProxy{Name=context::p, WorkerId=context, id=4d896f1}
+08-13 08:37:52.007	pie	Info	4907	WorkController	WorkProxy is not enqueued because WorkController is disposed: WorkProxy{Name=context::n, WorkerId=context, id=aa36e98}
+08-13 08:37:52.007	pie	Info	4907	WorkController	WorkProxy is not enqueued because WorkController is disposed: WorkProxy{Name=context::m, WorkerId=context, id=14fd07b}
+08-13 08:37:52.006	pie	Info	4907	WorkController	WorkProxy is not enqueued because WorkController is disposed: WorkProxy{Name=context::j, WorkerId=context, id=838d00a}
+08-13 08:37:51.966	pie	Info	4907	StreamController	cleanUpControllerScope(nowcards--726814313321738259)
+08-13 08:37:51.966	pie	Warning	4907	SearchService	Abort, client detached.
+08-13 08:37:51.955	pie	Info	4907	StreamRenderer	cleanUpRendererScope(nowcards--726814313321738259)
+08-13 08:37:51.846	pie	Warning	1691	SurfaceFlinger	couldn't log to binary event log: overflow.
+08-13 08:37:51.846	pie	Warning	1691	SurfaceFlinger	couldn't log to binary event log: overflow.
+08-13 08:37:51.803	pie	Debug	10279	EGL_emulation	eglMakeCurrent: 0xbd10aea0: ver 3 0 (tinfo 0xbd22dfe0)
+08-13 08:37:51.784	pie	Debug	10279	EGL_emulation	eglMakeCurrent: 0xbd10aea0: ver 3 0 (tinfo 0xbd22dfe0)
+08-13 08:37:51.761	pie	Warning	1843	system_server	Failed to determine oat file name for dex location /data/app/com.mcopanacea.getpassport-5Nhu8VFdIwXSBtE_xpccEw==/base.apk: Dalvik cache directory does not exist
+08-13 08:37:51.761	pie	Info	1843	ActivityManager	Displayed com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity: +3s788ms
+08-13 08:37:51.740	pie	Debug	10279	EGL_emulation	eglMakeCurrent: 0xbd10aea0: ver 3 0 (tinfo 0xbd22dfe0)
+08-13 08:37:51.700	pie	Debug	10279	EGL_emulation	eglMakeCurrent: 0xbd10aea0: ver 3 0 (tinfo 0xbd22dfe0)
+08-13 08:37:51.612	pie	Debug	10279	eglCodecCommon	setVertexArrayObject: set vao to 0 (0) 3 2
+08-13 08:37:51.609	pie	Debug	10279	EGL_emulation	eglMakeCurrent: 0xbd10aea0: ver 3 0 (tinfo 0xbd22dfe0)
+08-13 08:37:51.579	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:51.570	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:51.559	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:51.556	pie	Debug	1691	SurfaceFlinger	duplicate layer name: changing com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity to com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity#1
+08-13 08:37:51.553	pie	Error	10279	eglCodecCommon	GoldfishAddressSpaceHostMemoryAllocator: ioctl_ping failed for device_type=5, ret=-1
+08-13 08:37:51.553	pie	Debug	10279	HostConnection	HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_YUV420_888_to_NV21 ANDROID_EMU_YUV_Cache ANDROID_EMU_async_unmap_buffer GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_gles_max_version_3_0 
+08-13 08:37:51.551	pie	Debug	10279	HostConnection	HostConnection::get() New Host Connection established 0xbd009e40, tid 10305
+08-13 08:37:51.551	pie	Debug	10279	HostConnection	createUnique: call
+08-13 08:37:51.519	pie	Error	1691	SurfaceFlinger	ro.sf.lcd_density must be defined as a build property
+08-13 08:37:51.516	pie	Debug	10279	EGL_emulation	eglMakeCurrent: 0xbd10aea0: ver 3 0 (tinfo 0xbd22dfe0)
+08-13 08:37:51.510	pie	Debug	10279	EGL_emulation	eglCreateContext: 0xbd10aea0: maj 3 min 0 rcv 3
+08-13 08:37:51.510	pie	Debug	10279	eglCodecCommon	setVertexArrayObject: set vao to 0 (0) 0 0
+08-13 08:37:51.498	pie	Debug	10279	OpenGLRenderer	Swap behavior 0
+08-13 08:37:51.498	pie	Warning	10279	OpenGLRenderer	Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+08-13 08:37:51.497	pie	Debug	10279	OpenGLRenderer	Swap behavior 1
+08-13 08:37:51.497	pie	Info	10279	OpenGLRenderer	Initialized EGL, version 1.4
+08-13 08:37:51.497	pie	Info	10279	ConfigStore	android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+08-13 08:37:51.497	pie	Info	10279	ConfigStore	android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+08-13 08:37:51.488	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 2768896
+08-13 08:37:51.481	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 2768896
+08-13 08:37:51.475	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 2768896
+08-13 08:37:51.474	pie	Debug	10279	HostConnection	HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_YUV420_888_to_NV21 ANDROID_EMU_YUV_Cache ANDROID_EMU_async_unmap_buffer GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_gles_max_version_3_0 
+08-13 08:37:51.472	pie	Debug	10279	HostConnection	HostConnection::get() New Host Connection established 0xbd007460, tid 10305
+08-13 08:37:51.366	pie	Warning	1591	audio_hw_generic	Not supplying enough data to HAL, expected position 2605470 , only wrote 2446560
+08-13 08:37:51.275	pie	Info	1843	GnssLocationProvider	WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@38b47eb)
+08-13 08:37:51.275	pie	Info	1843	GnssLocationProvider	WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@38b47eb)
+08-13 08:37:51.234	pie	Error	1705	storaged	getDiskStats failed with result NOT_SUPPORTED and size 0
+08-13 08:37:51.174	pie	Debug	10279	NativeWrapper	Native wrapper created v.5.7.5333
+08-13 08:37:51.172	pie	Info	10279	OpenCV	calling android_getCpuFeatures() ... Done (7ff)
+08-13 08:37:51.170	pie	Info	10279	OpenCV	calling android_getCpuFeatures() ...
+08-13 08:37:51.001	pie	Error	1691	SurfaceFlinger	ro.sf.lcd_density must be defined as a build property
+08-13 08:37:50.997	pie	Debug	10279	OpenGLRenderer	Skia GL Pipeline
+08-13 08:37:50.275	pie	Info	1843	GnssLocationProvider	WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@79cd8a9)
+08-13 08:37:50.275	pie	Info	1843	GnssLocationProvider	WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@79cd8a9)
+08-13 08:37:50.085	pie	Warning	10279	cea.getpasspor	Attempt to remove non-JNI local reference, dumping thread
+08-13 08:37:49.275	pie	Info	1843	GnssLocationProvider	WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@85d4430)
+08-13 08:37:49.275	pie	Info	1843	GnssLocationProvider	WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@85d4430)
+08-13 08:37:49.146	pie	Warning	10279	cea.getpassport	type=1400 audit(0.0:12): avc: denied { getattr } for path="/dev/pmsg0" dev="tmpfs" ino=248 scontext=u:r:untrusted_app:s0:c86,c256,c512,c768 tcontext=u:object_r:pmsg_device:s0 tclass=chr_file permissive=0
+08-13 08:37:49.154	pie	Warning	10279	monodroid-gc	GREF GC Threshold: 46080
+08-13 08:37:48.815	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:48.805	pie	Debug	2508	EGL_emulation	eglMakeCurrent: 0xdfd85600: ver 3 0 (tinfo 0xdfd834a0)
+08-13 08:37:48.804	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:48.794	pie	Debug	4907	EGL_emulation	eglMakeCurrent: 0xdfd85c00: ver 3 0 (tinfo 0xdfd83440)
+08-13 08:37:48.781	pie	Warning	1691	SurfaceFlinger	Attempting to destroy on removed layer: Surface(name=AppWindowToken{611abbb token=Token{e38104a ActivityRecord{10401b5 u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t2}}})/@0xb39a2db - animation-leash#0
+08-13 08:37:48.781	pie	Warning	1691	SurfaceFlinger	Attempting to destroy on removed layer: Surface(name=AppWindowToken{e447c32 token=Token{7a08c3d ActivityRecord{d9ff994 u0 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity t25}}})/@0x1da0c71 - animation-leash#0
+08-13 08:37:48.781	pie	Warning	1691	SurfaceFlinger	Attempting to set client state on removed layer: Surface(name=AppWindowToken{611abbb token=Token{e38104a ActivityRecord{10401b5 u0 com.google.android.apps.nexuslauncher/.NexusLauncherActivity t2}}})/@0xb39a2db - animation-leash#0
+08-13 08:37:48.781	pie	Warning	1691	SurfaceFlinger	Attempting to set client state on removed layer: Surface(name=AppWindowToken{e447c32 token=Token{7a08c3d ActivityRecord{d9ff994 u0 com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity t25}}})/@0x1da0c71 - animation-leash#0
+08-13 08:37:48.707	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:48.701	pie	Info	1966	chatty	uid=10025(com.android.systemui) RenderThread identical 12 lines
+08-13 08:37:48.581	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:48.402	pie	Warning	10279	cea.getpasspor	Attempt to remove non-JNI local reference, dumping thread
+08-13 08:37:48.282	pie	Info	1843	GnssLocationProvider	WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a07ea56)
+08-13 08:37:48.281	pie	Info	1843	GnssLocationProvider	WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@a07ea56)
+08-13 08:37:48.273	pie	Info	10279	cea.getpasspor	The ClassLoaderContext is a special shared library.
+08-13 08:37:48.240	pie	Error	10279	cea.getpasspor	Not starting debugger since process cannot load the jdwp agent.
+08-13 08:37:48.239	pie	Warning	10279	cea.getpasspor	Unexpected CPU variant for X86 using defaults: x86
+08-13 08:37:48.158	pie	Info	1843	AudioTrack	AUDIO_OUTPUT_FLAG_FAST successful; frameCount 0 -> 4512
+08-13 08:37:48.150	pie	Info	1843	ActivityManager	START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity bnds=[237,882][439,1140]} from uid 10007
+08-13 08:37:48.086	pie	Info	10279	ndk_translation	Initialized NDK translation
+08-13 08:37:48.055	pie	Info	4907	AudioController	internalShutdown
+08-13 08:37:48.049	pie	Info	4907	MicroDetector	Keeping mic open: false
+08-13 08:37:48.045	pie	Info	4907	MicroDetectionWorker	onReady
+08-13 08:37:48.039	pie	Info	4907	AudioController	Created new AudioSource
+08-13 08:37:48.039	pie	Info	4907	AudioController	Using mInputStreamFactoryBuilder
+08-13 08:37:48.039	pie	Info	4907	MicroDetectionWorker	#startMicroDetector [speakerMode: 0]
+08-13 08:37:48.030	pie	Warning	1843	ActivityManager	Slow operation: 82ms so far, now at startProcess: done updating pids map
+08-13 08:37:48.030	pie	Warning	1843	ActivityManager	Slow operation: 82ms so far, now at startProcess: starting to update pids map
+08-13 08:37:48.030	pie	Info	1843	ActivityManager	Start proc 10279:com.mcopanacea.getpassport/u0a86 for activity com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity
+08-13 08:37:48.030	pie	Warning	1843	ActivityManager	Slow operation: 82ms so far, now at startProcess: building log message
+08-13 08:37:48.030	pie	Warning	1843	ActivityManager	Slow operation: 82ms so far, now at startProcess: done updating battery stats
+08-13 08:37:48.030	pie	Warning	1843	ActivityManager	Slow operation: 81ms so far, now at startProcess: returned from zygote!
+08-13 08:37:48.018	pie	Warning	1591	audio_hw_generic	Not supplying enough data to HAL, expected position 2286301 , only wrote 2286000
+08-13 08:37:47.979	pie	Debug	1601	gralloc_ranchu	gralloc_alloc: Creating ashmem region of size 8298496
+08-13 08:37:47.926	pie	Info	1843	ActivityManager	START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.mcopanacea.getpassport/crc64eaf10376fcb5be3a.MainActivity bnds=[237,882][439,1140]} from uid 10007
+08-13 08:37:43.021	pie	Error	4907	ActivityThread	Failed to find provider info for com.google.android.apps.gsa.testing.ui.audio.recorded
+08-13 08:37:37.956	pie	Info	4907	chatty	uid=10041(com.google.android.googlequicksearchbox) UserFacing22 identical 8 lines
+08-13 08:37:47.279	pie	Info	1843	GnssLocationProvider	WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f7f4ba6)
+08-13 08:37:47.276	pie	Info	1843	GnssLocationProvider	WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@f7f4ba6)
+08-13 08:37:46.825	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:46.815	pie	Info	1966	chatty	uid=10025(com.android.systemui) RenderThread identical 3 lines
+08-13 08:37:46.785	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:46.774	pie	Info	1957	GoogleInputMethod	onStartInput() : Dummy InputConnection bound
+08-13 08:37:46.768	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:46.759	pie	Info	1957	GoogleInputMethod	onFinishInput() : Dummy InputConnection bound
+08-13 08:37:46.755	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:46.749	pie	Info	1966	chatty	uid=10025(com.android.systemui) RenderThread identical 7 lines
+08-13 08:37:46.682	pie	Debug	1966	EGL_emulation	eglMakeCurrent: 0xdfd85780: ver 3 0 (tinfo 0xdfd83510)
+08-13 08:37:46.281	pie	Info	1843	GnssLocationProvider	WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ad84bda)
+08-13 08:37:46.279	pie	Info	1843	GnssLocationProvider	WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@ad84bda)
+08-13 08:37:45.281	pie	Info	1843	GnssLocationProvider	WakeLock released by handleMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@df8b185)
+08-13 08:37:45.278	pie	Info	1843	GnssLocationProvider	WakeLock acquired by sendMessage(REPORT_SV_STATUS, 0, com.android.server.location.GnssLocationProvider$SvStatusInfo@df8b185)
+08-13 08:37:45.116	pie	Error	1788	netmgr	WifiForwarder unable to open QEMU pipe: Invalid argument
+08-13 08:37:45.116	pie	Error	1788	netmgr	Failed to open QEMU pipe 'qemud:network': Invalid argument

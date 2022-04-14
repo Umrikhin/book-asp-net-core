@@ -1,0 +1,1 @@
+sc create AuthorizationWinService binPath= "D:\AuthorizationWinService\Authorization.exe"

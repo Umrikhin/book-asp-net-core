@@ -1,0 +1,68 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model AjaxForm.Models.Person
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/style/style.css" />
+    <title>Отправка данных</title>
+</head>
+<body>
+    <div>
+        <form asp-action="SendData" asp-controller="Home"
+              data-ajax="true" data-ajax-method="POST"
+              data-ajax-begin="OnBegin" data-ajax-failure="OnFailure"
+              data-ajax-success="OnSuccess" data-ajax-complete="OnComplete">
+            <div class="container">
+                <h2>Заполните форму для отправки данных</h2>
+                <table class="table table-condensed">
+                    <tr>
+                        <td>Имя:</td>
+                        <td><input type="text" asp-for="FirstName" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Страна:</td>
+                        <td><input type="text" asp-for="Country" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Тест ошибки:</td>
+                        <td>
+                            <select class="form-select sel_option" asp-for="TestError">
+                                <option value="0">Без Ошибок</option>
+                                <option value="1">Эмулировать ошибку</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="left"><input type="submit" value="Отправить" class="btn btn-primary" /></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    <div id="progress" class="modal">
+        <div class="center">
+            <img src="~/images/Loader.gif" />
+        </div>
+    </div>
+    <script type="text/javascript">
+        function OnBegin() {
+            $("#progress").show();
+        }
+        function OnFailure(response) {
+            alert("Произошла ошибка.");
+        }
+        function OnSuccess(response) {
+            var message = "Имя: " + response.firstName;
+            message += "\nСтрана: " + response.country;
+            alert(message);
+        }
+        function OnComplete() {
+            $("#progress").hide();
+        }
+    </script>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js"></script>

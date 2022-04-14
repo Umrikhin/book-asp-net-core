@@ -1,0 +1,35 @@
+﻿@model HelloHtmlHelpers.Models.Book;
+<html>
+<head>
+    <title>Книга</title>
+</head>
+<body>
+@*<form method="post" action="~/Home/Add">
+    <p>
+        <label>Наименование</label><br />
+        <input type="text" name="Title" />
+    </p>
+    <p>
+        <label>Количество копий</label><br />
+        <input type="number" name="Copies" />
+    </p>
+    <p>
+        <input type="submit" value="Добавить" />
+    </p>
+</form>*@
+@using (Html.BeginForm("Add", "Home", FormMethod.Post))
+{
+    <p>
+        @Html.LabelFor(m=>m.Title)<br />
+        @Html.TextBoxFor(m=>m.Title)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Copies)<br />
+        @Html.TextBoxFor(m=>m.Copies, "", new { type = "number" })
+    </p>
+    <p>
+        <input type="submit" value="Добавить" />
+    </p>
+}
+</body>
+</html>

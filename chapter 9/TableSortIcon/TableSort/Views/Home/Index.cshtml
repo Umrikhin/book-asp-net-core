@@ -1,0 +1,50 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using TableSort.Models;
+@model List<Person>;
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Сортировка</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="row">
+            <h2>Клиенты</h2>
+            <div>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-primary">
+                        <tr>
+                        <th><a asp-action="Index" asp-controller="Home" asp-route-orderBy=@ViewBag.IdSort>Код</a>@ViewBag.IconIdSort</th>
+                        <th><a asp-action="Index" asp-controller="Home" asp-route-orderBy=@ViewBag.FirstNameSort>Имя</a>@ViewBag.IconFirstNameSort</th>
+                        <th><a asp-action="Index" asp-controller="Home" asp-route-orderBy=@ViewBag.LastNameSort>Фамилия</a>@ViewBag.IconLastNameSort</th>
+                        <th><a asp-action="Index" asp-controller="Home" asp-route-orderBy=@ViewBag.DateOfBirthSort>Рожден</a>@ViewBag.IconDateOfBirthSort</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ int i = 1; }
+                        @foreach (var row in Model)
+                        {
+                            <tr>
+                                <td>@row.Id</td>
+                                <td>@row.FirstName</td>
+                                <td>@row.LastName</td>
+                                <td>@row.DateOfBirth.ToString("dd.MM.yyyy")</td>
+                            </tr>
+                            i += 1;
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Всего:</td>
+                            <td>
+                                @Model.Count().ToString()
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
