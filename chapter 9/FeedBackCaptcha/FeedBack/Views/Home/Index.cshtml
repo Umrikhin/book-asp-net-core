@@ -49,3 +49,15 @@
     </div>
 </body>
 </html>
+<!-- этот код можно добавить, если нужно обновлять рисунок при щелке по нему левой кнопкой мыши -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $("img").click(function() {
+        resetCaptchaImage();
+    });
+
+    function resetCaptchaImage() {
+        d = new Date();
+        $("img").attr("src", "/get-captcha-image?" + d.getTime());
+    }
+</script>
