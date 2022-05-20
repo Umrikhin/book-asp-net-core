@@ -20,7 +20,7 @@ namespace FeedBack.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (!sendForm.IsАssent)
+                if (!sendForm.IsAssent)
                 {
                     ModelState.AddModelError("", "Не отмечено согласие на обработку данных!");
                     return View("Index", sendForm);
