@@ -24,5 +24,6 @@ namespace FeedBack.Models
         [Required(ErrorMessage = "Внесите текст сообщения.")]
         [StringLength(2500, ErrorMessage = "Количество символов в сообщении не должно превышать 2500.")]
         public string MessageForSend { get; set; } = string.Empty;
+        public bool IsАssent { get; set; } = false;
     }
 }

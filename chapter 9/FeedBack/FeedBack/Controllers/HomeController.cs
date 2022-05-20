@@ -20,6 +20,11 @@ namespace FeedBack.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (!sendForm.IsАssent)
+                {
+                    ModelState.AddModelError("", "Не отмечено согласие на обработку данных!");
+                    return View("Index", sendForm);
+                }
                 string reply = "Тема: <b>" + sendForm.Sbj + "</b>.<br/><br/>" + sendForm.MessageForSend;
                 reply = reply + "<br />Отправитель: " + sendForm.IM + "<br/><hr><a href='mailto:" + sendForm.Email + "'>Ответить отправителю</a>";
                 string err = string.Empty;

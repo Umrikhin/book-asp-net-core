@@ -37,6 +37,10 @@
                     <div><span asp-validation-for="MessageForSend" class="text-danger"></span></div>
                     <textarea rows="5" asp-for="MessageForSend" class="form-control" placeholder="Ваше сообщение"></textarea>
                 </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" id="flexCheckChecked" asp-for="IsАssent">
+                    <label class="form-check-label" for="flexCheckChecked">Согласаен на обработку данных</label>
+                </div>
                 <em>Поля, помеченные знаком * обязательны к заполнению</em>
                 <div class="text-center"><button type="submit" class="btn btn-primary">Отправить сообщение</button></div>
           </form>
