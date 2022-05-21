@@ -1,6 +1,5 @@
 ﻿namespace RadioButtonList.Models
 {
-    //Класс городов
     public class Fruit
     {
         public int id { get; set; }
