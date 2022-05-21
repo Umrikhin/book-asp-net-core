@@ -1,0 +1,25 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<SelectListItem> 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+</head>
+<body>
+    <form method="post" asp-controller="Home" asp-action="Сhoose">
+        @foreach (var fruit in Model)
+        {
+            <input id="@fruit.Value" type="radio" name="Fruit" value="@fruit.Value" @(fruit.Selected ? "checked" : string.Empty) />
+            <label for="@fruit.Value">@fruit.Text</label>
+            <br/>
+        }
+        <br/>
+        <input type="submit" value="Выбрать"/>
+    </form>
+    @if (ViewBag.Message != null)
+    {
+        <h3>@ViewBag.Message</h3>
+    }
+</body>
+</html>
