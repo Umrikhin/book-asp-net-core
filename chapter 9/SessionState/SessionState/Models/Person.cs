@@ -1,4 +1,4 @@
-﻿namespace TrainingCourses.Models
+﻿namespace SessionState.Models
 {
     public class Person
     {

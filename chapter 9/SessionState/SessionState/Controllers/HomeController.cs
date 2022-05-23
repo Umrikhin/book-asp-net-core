@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
-using TrainingCourses.Models;
+using SessionState.Models;
 
 namespace SessionState.Controllers
 {
