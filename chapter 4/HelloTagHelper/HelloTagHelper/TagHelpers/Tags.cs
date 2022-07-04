@@ -8,7 +8,7 @@ namespace HelloTagHelper.TagHelpers
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             output.TagName = "";
-            output.Content.SetHtmlContent($"<h3>Привет мир. Мое время: {DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss")}</h3>");
+            output.Content.SetHtmlContent($"<h3>Привет, мир. Мое время: {DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss")}</h3>");
         }
     }
     [HtmlTargetElement("AreaRec", TagStructure = TagStructure.NormalOrSelfClosing)]
