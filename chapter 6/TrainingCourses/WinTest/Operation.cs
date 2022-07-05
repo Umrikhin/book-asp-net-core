@@ -12,7 +12,7 @@ namespace WinTest
         {
             try
             {
-                //Получение данных при помощи сервиса
+                //Получение данных с помощью сервиса
                 var response = await _client.GetAsync(UrlWebApi + "/api/courses");
                 CheckStatusCode(response.StatusCode);
                 var obj = await response.Content.ReadAsStringAsync();
@@ -29,7 +29,7 @@ namespace WinTest
         {
             try
             {
-                //Получение данных при помощи сервиса
+                //Получение данных с помощью сервиса
                 var response = await _client.GetAsync(string.Format(UrlWebApi + "/api/courses/{0}", id));
                 CheckStatusCode(response.StatusCode);
                 var obj = await response.Content.ReadAsStringAsync();
