@@ -53,7 +53,7 @@ namespace AliceSkills.Controllers
         //Фраза по умолчанию
         private string SayDefault()
         {
-            return "Я не знаю что ответить на эту команду. Вызовите помощь.";
+            return "Я не знаю, что ответить на эту команду. Вызовите помощь.";
         }
         //Получение кода региона
         private string SayRegion(string code)
