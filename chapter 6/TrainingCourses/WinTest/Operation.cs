@@ -7,7 +7,7 @@ namespace WinTest
     internal class Operation
     {
         static HttpClient _client = new HttpClient();
-        static string UrlWebApi = "https://localhost:5001";
+        static string UrlWebApi = "https://localhost:5007";
         public static async Task<List<Course>> GetCourses()
         {
             try
