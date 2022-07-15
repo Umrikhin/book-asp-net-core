@@ -25,10 +25,14 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 int val = 0;
-app.MapGet("/", async context =>
+app.UseRouting();
+app.UseEndpoints(endpoints =>
 {
-    val++;
-    await context.Response.WriteAsync($"Result: {val}");
+    endpoints.MapGet("/", async context =>
+    {
+        val++;
+        await context.Response.WriteAsync($"Result: {val}");
+    });
 });
 
 app.Run();
