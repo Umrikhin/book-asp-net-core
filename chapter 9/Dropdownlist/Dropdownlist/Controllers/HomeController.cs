@@ -14,9 +14,9 @@ namespace Dropdownlist.Controllers
         public IActionResult Index(int idLand = 0)
         {
             ViewBag.Land = GetCountryForSelect();
-            List<City> citys = _regions.towns;
-            if (idLand > 0) citys = citys.Where(x => x.idLand == idLand).ToList();
-            return View(new ViewLand() { idLand = idLand, citys = citys });
+            List<City> cities = _regions.towns;
+            if (idLand > 0) cities = cities.Where(x => x.idLand == idLand).ToList();
+            return View(new ViewLand() { idLand = idLand, cities = cities });
         }
         Microsoft.AspNetCore.Mvc.Rendering.SelectList GetCountryForSelect()
         {

@@ -29,7 +29,7 @@
                 </thead>
                 <tbody>
                     @{int i = 0; }
-                    @foreach (var city in Model.citys)
+                    @foreach (var city in Model.cities)
                     {
                         i += 1;
                         <tr>
@@ -43,7 +43,7 @@
                     <tr>
                         <td colspan="2">Общая численность:</td>
                         <td>
-                            @Model.citys.Sum(x => x.PopulationSize).ToString("N0")
+                            @Model.cities.Sum(x => x.PopulationSize).ToString("N0")
                         </td>
                     </tr>
                 </tfoot>
