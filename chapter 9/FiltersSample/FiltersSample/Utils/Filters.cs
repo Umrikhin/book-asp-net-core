@@ -14,7 +14,7 @@ namespace FiltersSample.Utils
             if (Regex.IsMatch(userAgent, "MSIE|Trident|Edge"))
                 context.Result = new ObjectResult("Ваш браузер устарел!");
             else
-                await next();  // передаем управление следующему фильтру при отсутствии других фильтров 
+                await next();  // Передаем управление следующему фильтру при отсутствии других фильтров 
         }
     }
     public class SimpleFilterAsync : Attribute, IAsyncActionFilter
