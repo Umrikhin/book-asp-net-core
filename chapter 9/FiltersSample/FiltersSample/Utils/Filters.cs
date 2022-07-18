@@ -29,7 +29,7 @@ namespace FiltersSample.Utils
             if (_user.ToLower().Contains("admin"))
                 context.Result = new ObjectResult("Привет, Админ!");
             else
-                await next();  // передаем управление следующему фильтру при отсутствии других фильтров 
+                await next();  // Передаем управление следующему фильтру при отсутствии других фильтров 
         }
     }
     public class ConfigFilterAsync : Attribute, IAsyncActionFilter
@@ -44,7 +44,7 @@ namespace FiltersSample.Utils
             if (_config["CodeCountry"].ToLower() != "rus")
                 context.Result = new ObjectResult("Доступ запрещен!");
             else
-                await next();  // передаем управление следующему фильтру при отсутствии других фильтров 
+                await next();  // Передаем управление следующему фильтру при отсутствии других фильтров 
         }
     }
 }
