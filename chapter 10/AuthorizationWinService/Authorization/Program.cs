@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(webApplicationOptions);
 //    options.Listen(System.Net.IPAddress.Any, 5095);
 //    options.Listen(System.Net.IPAddress.Any, 5080, listenOptions =>
 //    {
-//        listenOptions.UseHttps("certificate.pfx", "qwerty1");
+//        listenOptions.UseHttps("certificate.pfx", "qwerty");
 //    });
 //});
 builder.Host.UseWindowsService();
