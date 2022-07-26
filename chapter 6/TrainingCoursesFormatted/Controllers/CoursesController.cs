@@ -58,7 +58,7 @@ namespace TrainingCourses.Controllers
             }
             catch (Exception ex)
             {
-                BadRequest(ex.Message);
+                return BadRequest(ex.Message);
             }
             return Ok(newId);
         }
