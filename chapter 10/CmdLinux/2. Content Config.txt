@@ -3,9 +3,9 @@ Description=Application example Authorization to run on Ubuntu
 
 [Service]
 # Путь к папке вашего приложения
-WorkingDirectory=/home/aspnet/Authorization
+WorkingDirectory=/home/aspnet/AuthorizationKestrel
 # Путь к исполняемому файлу и опубликованной dll
-ExecStart=/home/aspnet/Authorization/Authorization /home/aspnet/Authorization/Authorization.dll
+ExecStart=/home/aspnet/AuthorizationKestrel/Authorization /home/aspnet/AuthorizationKestrel/Authorization.dll
 Restart=always
 # Перезапускать сервис через 10 секунд при отказе приложения
 RestartSec=10
