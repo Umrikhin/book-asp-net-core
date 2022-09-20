@@ -1,0 +1,18 @@
+﻿@using Authorization.Services
+@inject IHttpContextAccessor HttpContextAccessor
+@inject IUsersPortalRepository users
+@if (HttpContextAccessor.HttpContext?.Session.GetString("UserId") != null)
+{
+    int id = Convert.ToInt32(HttpContextAccessor.HttpContext?.Session.GetString("UserId"));
+    var user = users.UsersPortal.Where(x => x.Id == id).FirstOrDefault();
+    string currentUser = user != null ? user.UserName: string.Empty;
+    <form method="post" asp-action="Logout">
+        @currentUser
+        <button type="submit" class="btn btn-danger">Выйти</button>
+    </form>
+}
+else
+{
+    <a class="btn btn-danger" asp-action="Login">Войти</a>
+}
+

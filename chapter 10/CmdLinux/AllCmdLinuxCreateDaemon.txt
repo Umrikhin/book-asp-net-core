@@ -1,0 +1,32 @@
+sudo nano /etc/systemd/system/authorization.service
+----------------------------------------------------------------------------------------------------------------
+
+[Unit]
+Description=Application example Authorization to run on Ubuntu
+
+[Service]
+# Путь к папке вашего приложения
+WorkingDirectory=/home/aspnet/Authorization
+# Путь к исполняемому файлу и опубликованной dll
+ExecStart=/home/aspnet/Authorization/Authorization /home/aspnet/Authorization/Authorization.dll
+Restart=always
+# Перезапускать сервис через 10 секунд при отказе приложения
+RestartSec=10
+# Устанавливает имя процесса для префикса строк журнала
+SyslogIdentifier=asp-net-core-example
+# Пользователь, под которым следует запускать ваш сервис
+User=aspnet 
+# Среда исполнения
+Environment=ASPNETCORE_ENVIRONMENT=Production
+
+[Install]
+WantedBy=multi-user.target
+
+
+----------------------------------------------------------------------------------------------------------------
+sudo systemctl daemon-reload
+sudo systemctl enable authorization.service
+sudo systemctl start authorization.service
+
+----------------------------------------------------------------------------------------------------------------
+sudo systemctl status authorization.service
